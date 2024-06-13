@@ -1,0 +1,149 @@
+﻿<Window x:Class="Workspace_Watcher_4._0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:Workspace_Watcher_4._0.MVVM.ViewModel"
+        xmlns:fc="http://devpelux.github.io/fullcontrols"
+        xmlns:local="clr-namespace:Workspace_Watcher_4._0"
+        mc:Ignorable="d"
+        Title="Workspace Watcher" Height="600" Width="920"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="False" 
+        MouseDown="Window_MouseDown" 
+        Closing="Window_Closing"
+        WindowStartupLocation="CenterScreen" Activated="Window_Activated">
+
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Border Background="White"
+            CornerRadius="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+                <RowDefinition Height="75"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="LogInButton" Opacity="0" IsEnabled="False" Command="{Binding LogInViewCommand}"/>
+
+            <DockPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <fc:ButtonPlus Background="White" Height="30" Width="30" BorderThickness="0" BackgroundOnMouseOver="LightGray" Click="MinimizeWindow_Click" CornerRadius="0,0,0,0">
+                    <Image Source="/minimize-sign.png" Height="10"/>
+                </fc:ButtonPlus>
+                <fc:ButtonPlus Background="White" Height="30" Width="30" BorderThickness="0" BackgroundOnMouseOver="Red" Click="CloseWindow_Click" CornerRadius="0,10,0,0">
+                    <Image Source="/close.png" Height="10"/>
+                </fc:ButtonPlus>
+            </DockPanel>
+
+            <Border Grid.Column="0" Grid.Row="0"
+                    CornerRadius="10,0,0,0"
+                    Background="AliceBlue">
+                <Image Source="/Workspace_Watcher_Logo.png"/>
+            </Border>
+
+            <StackPanel Grid.Column="0" Grid.Row="1"
+                        Background="AliceBlue">
+
+                <RadioButton x:Name="HomeButton"
+                             Content="Home"
+                             Height="50"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsEnabled="False"
+                             Opacity="0"
+                             Command="{Binding HomeViewCommand}"/>
+
+                <RadioButton x:Name="StatisticsButton"
+                             Content="Statistics"
+                             Height="50"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsEnabled="False"
+                             Opacity="0"
+                             Command="{Binding StatisticsViewCommand}"/>
+
+                <RadioButton x:Name="ProfileButton"
+                             Content="Profile"
+                             Height="50"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsEnabled="False"
+                             Opacity="0"
+                             Command="{Binding ProfileViewCommand}"/>
+
+            </StackPanel>
+
+            <ContentControl x:Name ="cc" Grid.Row="1" Content="{Binding CurrentView}" Grid.ColumnSpan="2" Margin="198,0,2,15"/>
+
+            <Border x:Name="RightBottomBorder" Grid.Row="2" Grid.Column="1"
+                    CornerRadius="0,0,10,0"
+                    Background="White">
+
+                <DockPanel>
+
+                    <TextBlock x:Name="faceDetectedText" 
+                        Text="No Face Detected"
+                        Foreground="Black"
+                        FontSize="12"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="20,0,0,0"
+                        Opacity="0"/>
+
+                    <Border x:Name="RecordIndicator"
+                        Width="30"
+                        BorderBrush="Black"
+                        Height="30"
+                        Background="Red"
+                        CornerRadius="50"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,20,0"
+                        Opacity="0">
+                        <Border.Effect>
+                            <DropShadowEffect x:Name="MyShadowEffect" Color="Red" ShadowDepth="0" BlurRadius="15" RenderingBias="Quality"/>
+                        </Border.Effect>
+                    </Border>
+
+                </DockPanel>
+
+            </Border>
+
+            <Border x:Name="LeftBottomBorder" Grid.Column="0" Grid.Row="2"
+                    Background="AliceBlue"
+                    CornerRadius="0,0,0,10">
+
+                <StackPanel Cursor="">
+                    <fc:ButtonPlus x:Name="LogOutButton"
+                                   Width="70"
+                                   Background="DeepSkyBlue"
+                                   BorderThickness="0"
+                                   BackgroundOnMouseOver="DeepSkyBlue"
+                                   Cursor="Hand"
+                                   Margin="0,10,0,0"
+                                   Command="{Binding RegistrationViewCommand}"
+                                   IsEnabled="False"
+                                   Opacity="0" Click="LogOut_Click">
+                        <StackPanel>
+                            <Image Source="/benutzer.png" Height="20" Width="20"/>
+                            <Label Content="Log Out" HorizontalAlignment="Center"/>
+                        </StackPanel>
+
+                    </fc:ButtonPlus>
+                </StackPanel>
+
+            </Border>
+
+        </Grid>
+
+    </Border>
+</Window>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workspace Watcher 4.0", "Workspace Watcher 4.0\Workspace Watcher 4.0.csproj", "{B7258DD9-24C1-4DA2-9780-B0BA60828958}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7258DD9-24C1-4DA2-9780-B0BA60828958}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7258DD9-24C1-4DA2-9780-B0BA60828958}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7258DD9-24C1-4DA2-9780-B0BA60828958}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7258DD9-24C1-4DA2-9780-B0BA60828958}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9B4E568-BDFB-4A39-A353-FB0B0343B64A}
+	EndGlobalSection
+EndGlobal

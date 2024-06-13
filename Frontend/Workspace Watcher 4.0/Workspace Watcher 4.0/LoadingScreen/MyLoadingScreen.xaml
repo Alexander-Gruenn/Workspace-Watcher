@@ -1,0 +1,20 @@
+﻿<Window x:Class="Workspace_Watcher_4._0.LoadingScreen.MyLoadingScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Workspace_Watcher_4._0.LoadingScreen" xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="MyLoadingScreen" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="Transparent">
+    <Border CornerRadius="10" Background="White">
+        <Image gif:ImageBehavior.AnimatedSource="/LoadingScreen/Workspace-Watcher-logo-animation.gif"
+               Margin="10"
+               gif:ImageBehavior.RepeatBehavior="1"/>
+
+    </Border>
+</Window>

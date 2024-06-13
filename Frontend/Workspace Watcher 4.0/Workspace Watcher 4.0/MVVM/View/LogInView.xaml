@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="Workspace_Watcher_4._0.MVVM.View.LogInView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Workspace_Watcher_4._0.MVVM.View" xmlns:fc="http://devpelux.github.io/fullcontrols"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock Grid.Row="0"
+               Text="LOG IN"
+               Foreground="Black"
+               FontSize="36"
+               FontFamily="Bahnschrift Light"
+               HorizontalAlignment="Center"
+               Margin="20,0,0,0" VerticalAlignment="Center"/>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Width="500" Grid.Row="0">
+                <DockPanel Margin="10">
+                    <Border Background="White" CornerRadius="10" Height="50" Width="50" Margin="10">
+                        <Image Source="/MVVM/View/Email Icon.png" Height="50" Width="50"/>
+                    </Border>
+                    <fc:TextBoxPlus x:Name="mailTxtBox" Height="35" Hint="Mail" FontWeight="Bold" TextChanged="mailTxtBox_TextChanged"/>
+                    <!--<TextBox x:Name="MailBox" Style="{DynamicResource RegistrationTextBoxDesign}" Text="Mail" LostFocus="Registration_LostFocus" GotFocus="Mail_GotFocus" Foreground="White"/>-->
+                </DockPanel>
+                <Label x:Name="mailErrorLabel" Content=" "  Margin="70,0,10,0" Foreground="Red"/>
+                <DockPanel Margin="10">
+                    <Border Background="White" CornerRadius="10" Height="50" Width="50" Margin="10">
+                        <Image Source="/MVVM/View/Password Icon.png" Height="50" Width="50"/>
+                    </Border>
+
+                    <!--<PasswordBox Style="{DynamicResource PasswordStyle}"/>-->
+                    <!--TODO: Download IPrompt Nugget for PasswordBox-->
+                        <fc:PasswordBoxPlus x:Name="passwordTxtBox" Hint="Password" Height="35" EnablePeekButton="True" FontWeight="Bold" PasswordChanged="passwordTxtBox_PasswordChanged"/>
+                </DockPanel>
+                <Label x:Name="passwordErrorLabel" Content=" " Margin="70,0,10,0" Foreground="Red"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Row="1" VerticalAlignment="Bottom" Margin="150,0,150,20">
+                <Button x:Name="logInButton" IsEnabled="False" Cursor="Hand" Style="{DynamicResource RegisterButtonStyle}" Margin="70,0,70,0" Height="30" Content="Log In" Click="LogIn_Click"/>
+
+                <Button x:Name="registerButton" Cursor="Hand" Content="Register" Style="{DynamicResource LogInButtonStyle}" Margin="150,20,150,0" FontStyle="Italic" Click="RegistrationPage_Click"/>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

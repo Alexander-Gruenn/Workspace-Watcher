@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ec414b2d-3b7b-4b62-a51e-a7387c6f2a1d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/process-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/process-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/Workspace Watcher 4.0/Workspace Watcher 4.0/Logic/DetectedProcess.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/Workspace Watcher 4.0/Workspace Watcher 4.0/Logic/DetectedProcess.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/Workspace Watcher 4.0/Workspace Watcher 4.0/MVVM/View/LogInView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/Workspace Watcher 4.0/Workspace Watcher 4.0/MVVM/View/LogInView.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/Workspace Watcher 4.0/Workspace Watcher 4.0/MVVM/View/ProfileView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/Workspace Watcher 4.0/Workspace Watcher 4.0/MVVM/View/ProfileView.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/Workspace Watcher 4.0/Workspace Watcher 4.0/MVVM/View/RegistrationView.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/Workspace Watcher 4.0/Workspace Watcher 4.0/MVVM/View/RegistrationView.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Frontend/Workspace Watcher 4.0/Workspace Watcher 4.0/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Frontend/Workspace Watcher 4.0/Workspace Watcher 4.0/MainWindow.xaml.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ImJzrUYm1ojmgQHkOSHUCx7dLV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/code/Workspace Watcher/Backend/api&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\code\School\Workspace-Watcher\Backend\api" />
+      <recent name="C:\code\Workspace Watcher\Backend\api" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\code\Workspace Watcher\Backend\api" />
+      <recent name="C:\code\School\Workspace-Watcher\Backend\api" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.index.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec414b2d-3b7b-4b62-a51e-a7387c6f2a1d" name="Changes" comment="" />
+      <created>1670781092143</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670781092143</updated>
+      <workItem from="1670781094342" duration="3892000" />
+      <workItem from="1670866197515" duration="19000" />
+      <workItem from="1671093439310" duration="5236000" />
+      <workItem from="1671714068130" duration="1857000" />
+      <workItem from="1672964525873" duration="1020000" />
+      <workItem from="1673009457051" duration="2049000" />
+      <workItem from="1673099910312" duration="7666000" />
+      <workItem from="1673182422898" duration="11406000" />
+      <workItem from="1673259365645" duration="3839000" />
+      <workItem from="1673527221936" duration="6907000" />
+      <workItem from="1673535146068" duration="1682000" />
+      <workItem from="1673593385341" duration="5299000" />
+      <workItem from="1673954904633" duration="120000" />
+      <workItem from="1674112877673" duration="8678000" />
+      <workItem from="1676550559084" duration="2679000" />
+      <workItem from="1676559822430" duration="238000" />
+      <workItem from="1677136728319" duration="8762000" />
+      <workItem from="1677158003944" duration="4065000" />
+      <workItem from="1677743253899" duration="9571000" />
+      <workItem from="1678275402759" duration="45000" />
+      <workItem from="1678346741579" duration="6495000" />
+      <workItem from="1678355874642" duration="793000" />
+      <workItem from="1678968453096" duration="1658000" />
+      <workItem from="1679037075534" duration="2711000" />
+      <workItem from="1679310773177" duration="1601000" />
+      <workItem from="1679471159438" duration="3165000" />
+      <workItem from="1679561454713" duration="635000" />
+      <workItem from="1679572576576" duration="2577000" />
+      <workItem from="1679642250724" duration="1445000" />
+      <workItem from="1679996422977" duration="566000" />
+      <workItem from="1679997286450" duration="421000" />
+      <workItem from="1680071895958" duration="1313000" />
+      <workItem from="1680180516571" duration="649000" />
+      <workItem from="1681289774077" duration="1683000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

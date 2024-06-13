@@ -1,0 +1,332 @@
+openapi: 3.0.3
+info:
+  title: Workspace Watcher - OpenAPI
+  description: |-
+    This is the OpenAPI specification/documentation for the API developed for the Project Workspace-Watcher.
+    
+    All API Endpoints will be implemented as specified in this document. 
+    
+    Parameters, respones etc. will implemented as documented here.
+  contact:
+    email: 190016@studierende.htl-donaustadt.at
+  version: 1.0.0
+servers:
+  - url: 34.139.117.102
+tags:
+  - name: process
+    description: Everything about the processes
+  - name: user
+    description: Operations about a user
+paths:
+  /api/process:
+    put:
+      tags:
+        - process
+      description: Updates an existing process by processName
+      operationId: updateProcess
+      requestBody:
+        description: Process to be updated
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Process'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Process'          
+        '400':
+          description: Process not found
+        '405':
+          description: Error while handling the input
+    post:
+      tags:
+        - process
+      description: Adds a new process
+      operationId: addProcess
+      requestBody:
+        description: Process to be updated
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Process'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Process'          
+        '405':
+          description: Invalid input
+    get:
+      tags:
+        - process
+      description: Returns all processes
+      operationId: getAllProcesses
+      parameters: []
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Process'
+        '400':
+          description: Error   
+  /api/process/getByDisplayedName:
+    get:
+      tags:
+        - process
+      description: Returns process by its displayedName
+      operationId: getProcessByDisplayedName
+      parameters:
+        - name: displayedName
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Process'
+        '400':
+          description: Invalid input
+  /api/process/{processName}:
+    get:
+      tags:
+        - process
+      description: Returns process by processName
+      operationId: getProcessByProcessName
+      parameters:
+        - name: processName
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Process'          
+        '400':
+          description: Invalid processName supplied
+        '404':
+          description: Process not found
+    delete:
+      tags:
+        - process
+      summary: Deletes a process
+      description: delete a process
+      operationId: deleteProcess
+      parameters:
+        - name: api_key
+          in: header
+          description: ''
+          required: false #should probably be true
+          schema:
+            type: string
+        - name: processName
+          in: path
+          description: ProcessName of the process, which is to be deleted
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: Invalid input
+  /api/user/register:
+    post:
+      tags:
+        - user
+      summary: Creates user
+      description: This can only be done by the logged in user.
+      operationId: createUser
+      requestBody:
+        description: User, which is to be added
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        default:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '400':
+          description: Invalid input
+  /api/user/login:
+    get:
+      tags:
+        - user
+      summary: Logs user into the system
+      description: ''
+      operationId: loginUser
+      parameters:
+        - name: email
+          in: query
+          description: The email for login
+          required: false
+          schema:
+            type: string
+        - name: password
+          in: query
+          description: The password for login in clear text
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          headers:
+            X-Rate-Limit:
+              description: calls per hour allowed by the user
+              schema:
+                type: integer
+                format: int32
+            X-Expires-After:
+              description: date in UTC when token expires
+              schema:
+                type: string
+                format: date-time
+          content:
+            application/json:
+              schema:
+                type: string
+        '400':
+          description: Invalid username/password supplied
+  /api/user/logout:
+    post:
+      tags:
+        - user
+      summary: Logs out current logged in user session
+      description: ''
+      operationId: logoutUser
+      parameters: []
+      responses:
+        default:
+          description: successful operation
+  /api/user/{email}:
+    get:
+      tags:
+        - user
+      summary: Get user by user email
+      description: ''
+      operationId: getUserByEmail
+      parameters:
+        - name: email
+          in: path
+          description: email of the user
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'          
+        '400':
+          description: Invalid email supplied
+        '404':
+          description: User not found
+    put:
+      tags:
+        - user
+      summary: Updates user
+      description: This can only be done by the logged in user.
+      operationId: updateUser
+      parameters:
+        - name: email
+          in: path
+          description: email of the user, which is to be updated
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Updates an already existing user
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        default:
+          description: Successful operation
+    delete:
+      tags:
+        - user
+      summary: Deletes user
+      description: This can only be done by the logged in user.
+      operationId: deleteUser
+      parameters:
+        - name: email
+          in: path
+          description: email of the user, which is to be deleted
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: Invalid email supplied
+        '404':
+          description: User not found
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        ID:
+          type: integer
+          format: int32
+          example: 10
+        email:
+          type: string
+          example: walter.gelb@email.com
+        firstName:
+          type: string
+          example: Walter
+        surname:
+          type: string
+          example: Gelb
+        password:
+          type: string
+          example: '12345ABCDEF'
+        role:
+          type: string
+          example: 'admin'  
+    Process:
+      required:
+        - name
+        - photoUrls
+      type: object
+      properties:
+        processName:
+          type: string
+          example: devenv
+        displayedName:
+          type: string
+          example: Visual Studio
+        sec:
+          type: integer
+          format: int32
+  requestBodies:
+    Process:
+      description: Process object that needs to be added
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Process'

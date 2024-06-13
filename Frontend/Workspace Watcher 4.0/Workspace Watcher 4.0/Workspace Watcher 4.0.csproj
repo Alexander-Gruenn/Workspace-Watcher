@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>Workspace_Watcher_4._0</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\Workspace_Watcher_Logo_Taskbar_without_WW.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="benutzer.png" />
+    <None Remove="close.png" />
+    <None Remove="LoadingScreen\Workspace-Watcher-logo-animation.gif" />
+    <None Remove="minimize-sign.png" />
+    <None Remove="minus.png" />
+    <None Remove="moon.png" />
+    <None Remove="MVVM\View\benutzer.png" />
+    <None Remove="MVVM\View\Email Icon.png" />
+    <None Remove="MVVM\View\Password Icon.png" />
+    <None Remove="MVVM\View\UserImage.png" />
+    <None Remove="MVVM\View\Username Icon.png" />
+    <None Remove="MVVM\View\Vinvent.png" />
+    <None Remove="Strich.png" />
+    <None Remove="Workspace_Watcher_Logo.png" />
+    <None Remove="X.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Animations\" />
+    <None Remove="MVVM\View\icons8-bleistift-30.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Workspace_Watcher_Logo_Taskbar_without_WW.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MVVM\Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Emgu.CV" Version="4.6.0.5131" />
+    <PackageReference Include="Emgu.CV.runtime.windows" Version="4.6.0.5131" />
+    <PackageReference Include="FullControls" Version="2.1.0" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Management" Version="7.0.0" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="benutzer.png" />
+    <Resource Include="close.png" />
+    <Resource Include="LoadingScreen\Workspace-Watcher-logo-animation.gif" />
+    <Resource Include="minimize-sign.png" />
+    <Resource Include="MVVM\View\Email Icon.png" />
+    <Resource Include="MVVM\View\Password Icon.png" />
+    <Resource Include="MVVM\View\UserImage.png" />
+    <Resource Include="MVVM\View\Username Icon.png" />
+    <Resource Include="MVVM\View\Vinvent.png" />
+    <Resource Include="Workspace_Watcher_Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="MVVM\View\icons8-bleistift-30.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="haarcascade_frontalface_default.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="haarcascade_profileface.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\Workspace_Watcher_Logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
